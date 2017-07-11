@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,18 +25,69 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anthony-delanoix-17739" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-1g-bl4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I've been to Paris at least two times..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIy-It-exW">
+                                <rect key="frame" x="16" y="85" width="298" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="cAE-YV-RYc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I've seen the Eiffel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ao-P5-g7K">
+                                <rect key="frame" x="69" y="136" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="DPE-Bw-65p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I've seen a eyeful!&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJu-dH-QjB">
+                                <rect key="frame" x="201" y="187" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="hom-Pi-pQu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAY Z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcV-bC-1ze">
+                                <rect key="frame" x="24" y="287" width="50" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="U7b-ha-mjC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Awe-1g-bl4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3mm-kn-veD"/>
+                            <constraint firstItem="4Ao-P5-g7K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="69" id="55F-dl-uwL"/>
+                            <constraint firstItem="SIy-It-exW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8W7-oe-CPX"/>
+                            <constraint firstItem="SIy-It-exW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="85" id="9nP-wz-1FZ"/>
+                            <constraint firstItem="4Ao-P5-g7K" firstAttribute="top" secondItem="SIy-It-exW" secondAttribute="bottom" constant="30" id="No5-rW-Q9S"/>
                             <constraint firstItem="Awe-1g-bl4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qcm-IY-jpY"/>
                             <constraint firstAttribute="bottom" secondItem="Awe-1g-bl4" secondAttribute="bottom" id="XjX-AZ-mPR"/>
+                            <constraint firstItem="mJu-dH-QjB" firstAttribute="top" secondItem="4Ao-P5-g7K" secondAttribute="bottom" constant="30" id="ZUm-Ip-xYj"/>
+                            <constraint firstItem="AcV-bC-1ze" firstAttribute="top" secondItem="4Ao-P5-g7K" secondAttribute="bottom" constant="130" id="peT-nz-iOI"/>
+                            <constraint firstAttribute="trailing" secondItem="mJu-dH-QjB" secondAttribute="trailing" constant="28" id="qBR-Bu-sNP"/>
                             <constraint firstAttribute="trailing" secondItem="Awe-1g-bl4" secondAttribute="trailing" id="ram-7i-U8Z"/>
+                            <constraint firstItem="AcV-bC-1ze" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="24" id="tbM-Y3-b04"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eiffelLabelLeadingConstraint" destination="55F-dl-uwL" id="7K3-lt-aso"/>
+                        <outlet property="eyefulLabelTrailingConstraint" destination="qBR-Bu-sNP" id="PL4-Za-bKp"/>
+                        <outlet property="jayzLabelLeadingConstraint" destination="tbM-Y3-b04" id="tVH-82-1zC"/>
+                        <outlet property="parisLabelLeadingConstraint" destination="8W7-oe-CPX" id="Xzp-li-bzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
